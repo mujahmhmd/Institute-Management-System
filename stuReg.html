@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="Application.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <H2 data-text="Global&nbsp;&nbsp;International&nbsp;&nbsp;College"><b>Global&nbsp;&nbsp;International&nbsp;&nbsp;College</b></H2>
+        <div class="title">Student Registration</div>
+        <div class="content">
+            <form action="stu_reg.php" method="post" onsubmit="return validateForm()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="fullname" placeholder="Enter your Full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Reg No </span>
+                        <input type="text" name="regno" placeholder="Enter your Register No" required>
+                    </div>
+
+
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" name="emailadd" placeholder="Enter your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">NIC</span>
+                        <input type="text" name="nic" placeholder="Enter your NIC" pattern=".{10,}">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Name</span>
+                        <input type="text" name="username" placeholder="Enter your User Name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">password</span>
+                        <input type="password" id="password" name="password1" placeholder="Enter your password" pattern=".{4,}">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Cofirm password</span>
+                        <input type="password" id="confirm_password" name="cpassword" placeholder="Retype your password" pattern=".{4,}">
+                    </div>
+                    <div class="input-box">
+                        <span class="details" name="course">Course</span>
+                        <select id="Course" name="course" required>
+                          <option value="">--select course</option>
+                <option value="HNDIT">HNDIT</option>
+                <option value="HNDE">HNDE</option>
+                <option value="HNDA">HNDA</option>
+                <option value="HNDTHM">HNDTHM</option>
+            </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details" name="year">Semester</span>
+                        <select id="Course" name="year1" required>
+                          <option value="">--select semester</option>
+                          <option value="1st Year 1st Semester">1st Year 1st Semester</option>
+                          <option value="1st Year 2nd Semester">1st Year 2nd Semester</option>
+                          <option value="2nd Year 1st Semester">2nd Year 1st Semester</option>
+                          <option value="2nd Year 2nd Semester">2nd Year 2nd Semester</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="APPLY">
+                </div>
+
+            </form>
+            <a href="studentLoginPage.html">
+                <button class="button">Back to previous page </button> </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+
+        return true;
+    }
+</script>

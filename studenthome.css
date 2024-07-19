@@ -1,0 +1,30 @@
+.container_basic {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sub {
+    width: 50%;
+    margin: 20px;
+}
+
+.vision_container {
+    text-align: center;
+    background: #1fb281;
+    padding: 20px;
+    padding-top: 30px;
+    color: white;
+    font-weight: 700;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.mission_container {
+    text-align: center;
+    background: #1fb281;
+    padding: 20px;
+    height: 120px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
